@@ -1,0 +1,58 @@
+<!-- cadastrar_instituicao.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Instituição</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-3xl shadow-lg w-full max-w-md">
+        <h1 class="text-3xl font-bold text-center text-blue-900 mb-6">Cadastrar Instituição</h1>
+
+        <form method="POST" class="space-y-4">
+            <div>
+                <label for="nome" class="block text-sm font-medium text-gray-700">Nome:</label>
+                <input type="text" id="nome" name="nome" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="cnpj" class="block text-sm font-medium text-gray-700">CNPJ:</label>
+                <input type="number" id="cnpj" name="cnpj" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="endereco" class="block text-sm font-medium text-gray-700">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="telefone" class="block text-sm font-medium text-gray-700">Telefone:</label>
+                <input type="number" id="telefone" name="telefone" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="descricao" class="block text-sm font-medium text-gray-700">Descrição:</label>
+                <input type="text" id="descricao" name="descricao" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="senha" class="block text-sm font-medium text-gray-700">Senha:</label>
+                <input type="password" id="senha" name="senha" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-full shadow-lg transition duration-300">
+                Salvar
+            </button>
+        </form>
+
+        <div class="flex justify-between mt-6">
+            <a href="{{ url_for('index') }}" class="text-blue-900 hover:text-orange-500 font-semibold">Voltar</a>
+            <a href="{{ url_for('contrato') }}" class="text-blue-900 hover:text-orange-500 font-semibold">Contrato</a>
+        </div>
+    </div>
+</body>
+</html>

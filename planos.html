@@ -1,0 +1,54 @@
+<!-- planos.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center min-h-screen">
+    <div class="w-full max-w-4xl p-8 rounded-3xl mt-8">
+        <h1 class="text-4xl font-bold text-center text-blue-900 mb-6">Uma parceria que gera impacto social.</h1>
+        <div class="bg-white p-8 rounded-3xl shadow-lg">
+            <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+                Ao fazer parte do Protagonize, sua instituição não apenas preenche vagas de voluntariado, mas investe em um ciclo de transformação social. Você oferece uma oportunidade real para pessoas aplicarem seus conhecimentos e ganharem experiência, enquanto sua equipe recebe o apoio de talentos motivados e engajados.
+            </p>
+            
+            <div class="mt-8 text-center">
+                <h2 class="text-2xl font-bold text-blue-900 mb-4">Benefícios para sua Instituição</h2>
+                <ul class="text-left inline-block space-y-2">
+                    <li class="flex items-center space-x-2">
+                        <span class="text-green-500 text-xl">✅</span>
+                        <span class="text-gray-700">Acesso a uma rede de voluntários qualificados e engajados.</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span class="text-green-500 text-xl">✅</span>
+                        <span class="text-gray-700">Fortalecimento do impacto social e da reputação da sua marca.</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span class="text-green-500 text-xl">✅</span>
+                        <span class="text-gray-700">Soluções flexíveis e customizadas para suas necessidades.</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <a href="{{ url_for('cadastrar_instituicao') }}" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                    Cadastrar Instituição
+                </a>
+            </div>
+        </div>
+        <p class="text-center mt-6">
+            <a href="{{ url_for('index') }}" class="text-blue-900 hover:text-orange-500 font-semibold">Voltar para o Início</a>
+        </p>
+    </div>
+</body>
+</html>

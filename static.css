@@ -1,0 +1,24 @@
+
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilos para cards de voluntários */
+.volunteer-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.volunteer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos para os botões de ação */
+.btn-primary {
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,121 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protagonize</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="{{ url_for('index') }}" class="text-2xl font-bold text-blue-900">Protagonize</a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="{{ url_for('login') }}" class="text-blue-900 hover:text-orange-500 font-semibold">Login Institucional</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-blue-900 text-white py-16 md:py-24 text-center rounded-b-3xl">
+            <div class="container mx-auto px-4">
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+                    Protagonize: Conectando talentos que transformam vidas
+                </h1>
+                <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+                    Transforme realidades e amplie oportunidades para jovens e adultos 
+                </p>
+                <div class="mt-8 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                    <a href="{{ url_for('cadastrar_estudante') }}" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                        Quero ser voluntario como cuidador ou cuidadora 
+                    </a>
+                    <a href="{{ url_for('cadastrar_instituicao') }}" class="bg-transparent border-2 border-orange-500 hover:bg-orange-500 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                        Cadastrar Casa de repouso
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Sections -->
+        <section class="container mx-auto py-12 px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Seção 1: Comunidade -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg">
+                    <h2 class="text-2xl md:text-3xl font-bold text-blue-900">
+                        Seja o protagonista da sua própria história.
+                    </h2>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Nossa comunidade é formada por jovens e adultos que buscam qualificação e novas oportunidades. No Protagonize, você se conecta com a sua comunidade e aprimora suas habilidades em um ambiente que precisa de você.
+                    </p>
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-orange-500 text-3xl">💡</span>
+                            <p class="font-semibold text-gray-700">Experiencia profissional para Jovens e Adultos conquistar sua carreira .</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-orange-500 text-3xl">🚀</span>
+                            <p class="font-semibold text-gray-700">Receba dicas práticas para conquistar espaço no mercado de trabalho.</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-orange-500 text-3xl">🤝</span>
+                            <p class="font-semibold text-gray-700">Faça parte de uma comunidade que acredita no seu potencial para ir além.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção 2: Oportunidades -->
+                <div class="bg-blue-900 text-white p-8 rounded-3xl shadow-lg">
+                    <h2 class="text-2xl md:text-3xl font-bold">
+                        Encontre oportunidades aqui para ganhar experiencia como cuidador ou cuidadora
+                    </h2>
+                    <p class="mt-4 text-gray-200 leading-relaxed">
+                        Após concluir seu processo de preparação no Protagonize, seu perfil fica disponível em uma rede exclusiva, conectando você diretamente com instituições que valorizam e respeitam a sua trajetória.
+                    </p>
+                    <p class="mt-4 text-gray-200 font-light">
+                        Leve suas habilidades onde mais fazem a diferença: no cuidado e na transformação social.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="bg-gray-200 py-12 text-center rounded-3xl mx-4 my-8">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-blue-900">
+                    Quer fazer a diferença?
+                </h2>
+                <p class="mt-2 text-gray-700">
+                    Junte-se a nós e seja o protagonista que o mundo precisa.
+                </p>
+                <div class="mt-6 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                    <a href="{{ url_for('planos') }}" class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                        Ver Planos
+                    </a>
+                    <a href="{{ url_for('login') }}" class="bg-transparent border-2 border-blue-900 hover:bg-blue-900 text-blue-900 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                        Login Institucional
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-sm p-4 mt-8 text-center text-gray-600">
+        <p>&copy; 2024 Protagonize. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
